@@ -56,6 +56,7 @@ class CatalogosController extends Controller
             ->orderby('descripcion')
             ->orderby('nombre')
             ->get();
+
         return response()->json(['carreras' => $carreras], 200);
     }
 

@@ -85,7 +85,8 @@ Route::get('/estudiantes/formulario/{id}', 'EstudiantesController@getFormulario'
 Route::put('/estudiantes/update_perfil', 'EstudiantesController@updatePerfil');
 Route::put('/users/reset_password', 'UsersController@resetPassword');
 
-
+Route::get('/big/carreras/{periodoLectivoId}', 'BigController@carreras');
+Route::get('/big/carrera/{carreraId}/periodosacademicos', 'BigController@getPeriodosAcademicosByCarrera');
 
 Route::get('/prueba', 'PruebasController@get')->middleware('auth:api');
 
