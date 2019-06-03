@@ -87,6 +87,9 @@ Route::put('/users/reset_password', 'UsersController@resetPassword');
 
 Route::get('/big/carreras/{periodoLectivoId}', 'BigController@carreras');
 Route::get('/big/carrera/{carreraId}/periodosacademicos', 'BigController@getPeriodosAcademicosByCarrera');
+Route::get('/big/carrera/{carreraId}/asignaturas', 'BigController@getAsignaturasByCarrera');
+Route::get('/big/estudiantes/{periodoLectivoId}', 'BigController@getEstudiantesByPeriodoLectivo');
+Route::get('/big/estudiantes/{periodoLectivoId}/asignaturas', 'BigController@getEstudiantesAsignaturasByPeriodoLectivo');
 
 Route::get('/prueba', 'PruebasController@get')->middleware('auth:api');
 

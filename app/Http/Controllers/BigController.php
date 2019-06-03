@@ -19,4 +19,23 @@ class BigController extends Controller
         $periodosAcademicos = DB::select('select * from big_dto_getperiodosacademicos(?)', [$carreraId]);
         return $periodosAcademicos;
     }
+
+    public function getAsignaturasByCarrera($carreraId)
+    {
+        $asignaturas = DB::select('select * from big_dto_getasignaturas(?)', [$carreraId]);
+        return $asignaturas;
+
+    }
+
+    public function getEstudiantesByPeriodoLectivo($periodoLectivoId)
+    {
+        $estudiantes = DB::select('select * from big_dto_getestudiantes(?)', [$periodoLectivoId]);
+        return $estudiantes;        
+    }
+
+    public function getEstudiantesAsignaturasByPeriodoLectivo($periodoLectivoId)
+    {
+        return DB::select('select * from big_dto_getestudiantesasignaturas(?)', [$periodoLectivoId]);
+        
+    }
 }
